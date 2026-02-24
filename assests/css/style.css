@@ -1,135 +1,115 @@
+/* Variables de Color SEO 2025 */
 :root {
-    --rosa: #F8C8DC;
-    --crema: #FFFDF5;
-    --rosa-dark: #F06292;
-    --texto: #5D4037;
+    --rosa-pastel: #F8C8DC;
+    --crema-fondo: #FFFDF5;
+    --rosa-fuerte: #F06292;
+    --texto-oscuro: #5D4037;
     --blanco: #ffffff;
+    --shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-    font-family: 'Quicksand', sans-serif;
-    background-color: var(--crema);
-    color: var(--texto);
+    background-color: var(--crema-fondo);
+    color: var(--texto-oscuro);
+    font-family: 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* NAVBAR RESPONSIVA */
-.navbar {
+/* Navegación */
+.simple-nav {
     background: var(--blanco);
-    padding: 15px 0;
+    padding: 10px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    box-shadow: var(--shadow);
 }
-.nav-flex {
+.nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
-.nav-logo { height: 50px; border-radius: 50%; }
-.nav-links a {
-    text-decoration: none;
-    color: var(--texto);
-    margin-left: 15px;
-    font-size: 0.9rem;
-    font-weight: bold;
-}
+.mini-logo { height: 50px; border-radius: 50%; }
+.nav-links a { text-decoration: none; color: var(--texto-oscuro); margin-left: 20px; font-weight: bold; }
 
-/* HERO ADAPTATIVO */
+/* Hero */
 .hero {
-    height: 60vh;
-    background: url('https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=2070') center/cover;
+    height: 70vh;
+    background: linear-gradient(rgba(248, 200, 220, 0.4), rgba(248, 200, 220, 0.4)), url('https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    color: var(--texto);
+    padding: 20px;
 }
-.hero-overlay {
-    background: rgba(255, 253, 245, 0.7);
-    width: 100%;
-    padding: 40px 0;
-}
-.hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+.hero-content h1 { font-size: 3rem; margin-bottom: 10px; color: var(--texto-oscuro); }
 
-/* BARRA SOCIAL (De 1 columna a 3 en desktop) */
-.social-bar { background: var(--rosa); padding: 20px 0; text-align: center; }
-.bar-grid {
+/* Botones */
+.cta-button {
+    background: var(--rosa-fuerte);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.cta-button:hover { transform: scale(1.05); background: #d81b60; }
+
+/* Social Proof */
+.social-proof { background: var(--rosa-pastel); padding: 15px 0; text-align: center; font-weight: bold; }
+.proof-container span { margin: 0 15px; font-size: 0.9rem; }
+
+/* About Section */
+.about-section { padding: 60px 20px; max-width: 1000px; margin: 0 auto; }
+.about-container { display: flex; align-items: center; flex-wrap: wrap; gap: 40px; }
+.about-image img { width: 250px; border-radius: 50%; border: 8px solid var(--rosa-pastel); }
+.about-text { flex: 1; min-width: 300px; }
+
+/* Grid de Catálogo */
+.catalog-section { padding: 40px 20px; max-width: 1200px; margin: 0 auto; }
+.grid-container {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-}
-
-/* ABOUT (Se apila en móvil) */
-.about { padding: 60px 0; }
-.about-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    text-align: center;
-}
-.about-img img { width: 180px; border-radius: 50%; border: 5px solid var(--rosa); }
-
-/* CATÁLOGO RESPONSIVO (El corazón del diseño) */
-.section-title { text-align: center; margin-bottom: 40px; }
-.catalog-grid {
-    display: grid;
-    /* Esto hace que el grid sea automático: ajusta columnas según el ancho */
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 25px;
 }
 .card {
     background: var(--blanco);
     border-radius: 20px;
     overflow: hidden;
-    border: 1.5px solid var(--rosa);
-    /* Estado inicial: invisible y desplazado hacia abajo */
-    opacity: 0;
-    transform: translateY(50px);
-    /* Definimos la transición suave */
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out, box-shadow 0.3s;
-}
-.card img { width: 100%; height: 250px; object-fit: cover; }
-.card-content { padding: 20px; text-align: center; }
-
-/* BOTONES */
-.btn-main, .btn-wa {
-    display: inline-block;
-    padding: 12px 25px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
+    box-shadow: var(--shadow);
     transition: 0.3s;
+    border: 1px solid var(--rosa-pastel);
 }
-.btn-main { background: var(--rosa-dark); color: white; }
-.btn-wa { background: #25D366; color: white; margin-top: 15px; width: 100%; }
-
-/* MEDIA QUERIES PARA ESCRITORIO */
-@media (min-width: 768px) {
-    .hero h1 { font-size: 3.5rem; }
-    .bar-grid { grid-template-columns: repeat(3, 1fr); }
-    .about-grid { flex-direction: row; text-align: left; }
-    .about-img img { width: 250px; }
-    .nav-links a { font-size: 1rem; margin-left: 30px; }
-}
-
-.card:hover {
-    /* Mantenemos el pequeño salto al pasar el mouse una vez que ya apareció */
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(248, 200, 220, 0.4);
-}
-/* =================================== */
-
+.card:hover { transform: translateY(-10px); }
 .card img { width: 100%; height: 250px; object-fit: cover; }
-.card-content { padding: 20px; text-align: center; }
+.card-info { padding: 20px; text-align: center; }
+.price { font-size: 1.4rem; color: var(--rosa-fuerte); font-weight: bold; margin: 10px 0; }
+.ws-btn {
+    background: #25D366;
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
 
-/* --- (El resto de botones y media queries sigue igual) --- */
+/* Lead Magnet */
+.lead-magnet { padding: 60px 20px; text-align: center; }
+.magnet-box { background: var(--rosa-pastel); padding: 40px; border-radius: 30px; }
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .hero-content h1 { font-size: 2rem; }
+    .about-container { text-align: center; justify-content: center; }
+}
