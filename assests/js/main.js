@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const grid = document.getElementById('product-grid');
 
     // Cargamos el archivo JSON
-    fetch('assets/data/products.json')
+    fetch('assests/data/products.json')
         .then(response => response.json())
         .then(data => {
             if(data.length === 0) {
