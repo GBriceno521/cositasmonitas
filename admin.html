@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel de Control - Cositas Monitas</title>
+    <style>
+        body { font-family: sans-serif; background: #FFF5F7; padding: 40px; }
+        .panel { max-width: 500px; margin: auto; background: white; padding: 30px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        input, textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; }
+        button { background: #F06292; color: white; border: none; padding: 15px; width: 100%; border-radius: 10px; cursor: pointer; }
+        #output { background: #f4f4f4; padding: 15px; margin-top: 20px; font-family: monospace; font-size: 12px; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+    <div class="panel">
+        <h2>Añadir a Catálogo</h2>
+        <input type="text" id="name" placeholder="Nombre del producto">
+        <input type="text" id="price" placeholder="Precio (Ej: 15.00$)">
+        <input type="text" id="img" placeholder="URL de la imagen (Ej: img/foto1.jpg)">
+        <textarea id="desc" placeholder="Descripción breve..."></textarea>
+        <button onclick="generar()">Generar Código para JSON</button>
+        
+        <p>Copia este código y pégalo en assets/data/products.json:</p>
+        <div id="output"></div>
+    </div>
+
+    <script>
+        function generar() {
+            const prod = {
+                name: document.getElementById('name').value,
+                price: document.getElementById('price').value,
+                img: document.getElementById('img').value,
+                desc: document.getElementById('desc').value
+            };
+            document.getElementById('output').innerText = JSON.stringify(prod, null, 4) + ",";
+        }
+    </script>
+</body>
+</html>
