@@ -1,14 +1,35 @@
 [
-    {
-        "name": "Arreglo Floral Pastel",
-        "price": "25.00$",
-        "img": "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?w=500",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Un detalle tierno para cualquier ocasión."
-    },
-    {
-        "name": "Caja de Dulces Monita",
-        "price": "18.00$",
-        "img": "https://i.pinimg.com/474x/ed/44/ef/ed44ef6a548978af65a236a7dc9494ac.jpg",
-        "desc": "Personalizada con tus dulces favoritos y colores cremas y rosas."
-    }
+  {
+    "name": "Arreglo Floral Pastel",
+    "price": "25.00$",
+    "desc": "Un detalle tierno para cualquier ocasión especial.",
+    "instagram": "https://instagram.com/cositas.monitas",
+    "images": [
+      "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?w=900",
+      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=900",
+      "https://images.unsplash.com/photo-1463320726281-696a485928c7?w=900"
+    ]
+  },
+  {
+    "name": "Caja de Dulces Monita",
+    "price": "18.00$",
+    "desc": "Personalizada con tus dulces favoritos y colores crema y rosa.",
+    "instagram": "https://instagram.com/cositas.monitas",
+    "images": [
+      "https://i.pinimg.com/474x/ed/44/ef/ed44ef6a548978af65a236a7dc9494ac.jpg",
+      "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=900",
+      "https://images.unsplash.com/photo-1549007953-2f2dc0b24019?w=900"
+    ]
+  },
+  {
+    "name": "Arreglo de Globos Deluxe",
+    "price": "32.00$",
+    "desc": "Ideal para cumpleaños y celebraciones con estilo elegante.",
+    "instagram": "https://instagram.com/cositas.monitas",
+    "images": [
+      "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=900",
+      "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=900",
+      "https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?w=900"
+    ]
+  }
 ]
